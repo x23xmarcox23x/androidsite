@@ -1,3 +1,20 @@
-<p>
-  login works!
-</p>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>
+        Email:
+        <input type="text" formControlName="email" required>
+      </label>
+    </div>
+  
+    <div>
+      <label>
+        password:
+        <input type="text" formControlName="cognome" required>
+      </label>
+    </div>  
+      <button type="submit" [disabled]="!loginForm.valid">Accedi</button>
+  
+     
+     
+             
+</form>
